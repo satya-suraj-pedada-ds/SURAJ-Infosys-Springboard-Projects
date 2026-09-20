@@ -121,7 +121,7 @@ Sample boxed outputs are in `Results/` in this repo and in Drive `results/yolo_r
 
 ---
 
-## Repository layout
+## Repository Layout
 ```text
 SURAJ-Infosys-Springboard-Projects/
 ├── README.md
