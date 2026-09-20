@@ -63,3 +63,63 @@ Phase 1 patches were **not** used to train YOLO. They belong to the first attemp
 ---
 
 ## Final system
+PCB image
+→ YOLOv8n (conf=0.25, IoU=0.45)
+→ boxes + class + confidence
+→ Streamlit UI (upload, table, download)
+
+Training setup used in the notebook:
+
+- Model: YOLOv8n
+- Image size: 640
+- Batch: 16
+- Epochs: 80 (patience=15)
+- Device: CPU
+- Runtime: about 12 hours
+- Split: 70% train / 15% val / 15% test on 693 labeled images
+
+Label conversion: Pascal VOC XML → YOLO `class cx cy w h` (normalized).
+
+---
+
+## Results (from the training / test notebooks)
+
+Primary metric is **mAP@0.5** (detection), not classification accuracy.
+
+### Test set
+
+| Metric | Value |
+|---|---|
+| mAP@0.5 | 0.839 |
+| mAP@0.5:0.95 | 0.442 |
+| Precision (mean) | 0.881 |
+| Recall (mean) | 0.748 |
+| F1 (mean) | 0.804 |
+| Images / instances | 104 / 446 |
+
+### Per-class test (mAP@0.5)
+
+| Class | Precision | Recall | mAP@0.5 |
+|---|---|---|---|
+| missing_hole | 1.000 | 0.983 | 0.991 |
+| mouse_bite | 0.861 | 0.607 | 0.740 |
+| open_circuit | 0.754 | 0.754 | 0.837 |
+| short | 0.911 | 0.810 | 0.886 |
+| spur | 0.870 | 0.566 | 0.739 |
+| spurious_copper | 0.891 | 0.766 | 0.842 |
+
+### Validation set (for reference)
+
+| Metric | Value |
+|---|---|
+| mAP@0.5 | 0.809 |
+| mAP@0.5:0.95 | 0.393 |
+
+Missing holes are large and consistent, so the model is strongest there. Spurs and mouse bites are small track defects, so recall is lower. That is why the overall mAP sits near **0.84** instead of the easy-class score.
+
+Sample boxed outputs are in `Results/` in this repo and in Drive `results/yolo_red_boxes/`.
+
+---
+
+## Repository layout
+
