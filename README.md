@@ -4,7 +4,7 @@ YOLOv8-based detector for six common PCB manufacturing defects, with a Streamlit
 
 Built during an Infosys Springboard AI internship. The work went through two approaches: patch classification first, then full-image object detection after the first method failed in the web interface.
 
-**Dataset and trained weights (view only):**  
+**Dataset and trained weights :**  
 https://drive.google.com/drive/folders/1jckJoBLvpNfM4YSmr34En9ao4PbfXl9F?usp=sharing
 
 **Repository:**  
