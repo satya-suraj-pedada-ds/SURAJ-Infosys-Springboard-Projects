@@ -149,7 +149,6 @@ SURAJ-Infosys-Springboard-Projects/
     └── Sample_Spurious_Copper_Detections/
 ```
 
-Start with Milestone 2 if you only care about the detector that the app uses.
 
 ---
 
