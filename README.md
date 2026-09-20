@@ -122,4 +122,29 @@ Sample boxed outputs are in `Results/` in this repo and in Drive `results/yolo_r
 ---
 
 ## Repository layout
+```text
+PCB-Milestone-1(Module-1 and Module-2)/
+Missing_Holes.ipynb
+Mouse_Bite.ipynb
+Open_Circuit.ipynb
+Short.ipynb
+Spur.ipynb
+Spurious_Copper.ipynb
+→ template subtraction and 64×64 patch export
+PCB-Milestone-2(Module-3 and Module-4)/
+Milestone-2 _ Module 3.ipynb
+→ XML → YOLO labels, train YOLOv8n, validation
+Milestone-2 _ Module 4.ipynb
+→ learning curves, test metrics, boxed inference images
+PCB-Milestone-3(Module-5 and Module-6)/
+Milestone-3 _ Module-5-and-Module-6.ipynb
+→ Streamlit app + public tunnel from Colab
+Results/
+Sample_Missing_Holes_Detections/
+Sample_Mouse_Bite_Detections/
+Sample_Open_Circuit_Detections/
+Sample_Short_Detections/
+Sample_Spur_Detections/
+Sample_Spurious_Copper_Detections/
+```
 
